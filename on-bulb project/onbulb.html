@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital bulve</title>
+    <style>
+      * {
+        margin: 0%;
+        padding: 0%;
+        box-sizing: border-box;
+      }
+      #container {
+        width: 90%;
+        height: 60vh;
+        /* border: 1px solid black; */
+        margin: 20px auto;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #light-on {
+        text-align: center;
+        margin: 10px 0px;
+      }
+      .box-1 {
+        width: 280px;
+        height: 280px;
+        /* border: 1px solid red; */
+        /* float: left; */
+        margin: 3px;
+      }
+      .btn {
+        width: 90%;
+        height: 80px;
+        /* border: 2px solid red; */
+        margin: auto;
+        text-align: center;
+      }
+      .btn-1 {
+        font-size: 25px;
+        border: none;
+        background-color: #fffb0042;
+        padding: 3px 10px;
+        margin: 0px 5px;
+        transition: 0.5s;
+      }
+      .btn-1:hover{
+        background-color: #ff5e00ba;
+        color: white;
+        /* border: 1px solid #21ff0080; */
+      }
+
+      .btn-2 {
+        font-size: 25px;
+        border: none;
+        background-color: #fffb0042;
+        padding: 3px 10px;
+        margin: 0px 5px;
+        transition: 0.5s;
+      }
+      .btn-2:hover{
+        background-color: #ff5e00ba;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="light-on">Light-On</h1>
+    <div class="container" id="container">
+      <div class="box-1" id="box-1">
+        <img
+          src="image/off.png"
+          alt=""
+          width="280px"
+          height="280px"
+          class="myimg"
+        />
+      </div>
+      <div class="box-1" id="box-1">
+        <img
+          src="image/off.png"
+          alt=""
+          width="280px"
+          height="280px"
+          class="myimg"
+        />
+      </div>
+      <div class="box-1" id="box-1">
+        <img
+          src="image/off.png"
+          alt=""
+          width="280px"
+          height="280px"
+          class="myimg"
+        />
+      </div>
+      <div class="box-1" id="box-1">
+        <img
+          src="image/off.png"
+          alt=""
+          width="280px"
+          height="280px"
+          class="myimg"
+        />
+      </div>
+    </div>
+    <div class="btn">
+      <button onclick="lighton()" class="btn-1">Light-On</button>
+      <button onclick="lightoff()" class="btn-2">light-Off</button>
+    </div>
+
+    <script>
+      function lighton() {
+        let a = document.getElementsByClassName("myimg")[0];
+        let b = document.getElementsByClassName("myimg")[1];
+        let c = document.getElementsByClassName("myimg")[2];
+        let d = document.getElementsByClassName("myimg")[3];
+        let e = document.getElementById("light-on");
+        e.innerHTML = " Light-on ";
+        a.src = "image/on.png";
+        b.src = "image/on.png";
+        c.src = "image/on.png";
+        d.src = "image/on.png";
+      }
+
+      function lightoff() {
+        let a = document.getElementsByClassName("myimg")[0];
+        let b = document.getElementsByClassName("myimg")[1];
+        let c = document.getElementsByClassName("myimg")[2];
+        let d = document.getElementsByClassName("myimg")[3];
+        let e = document.getElementById("light-on");
+        e.innerHTML = " Light-off ";
+        a.src = "image/off.png";
+        b.src = "image/off.png";
+        c.src = "image/off.png";
+        d.src = "image/off.png";
+      }
+    </script>
+  </body>
+</html>
